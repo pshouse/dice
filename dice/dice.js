@@ -541,7 +541,9 @@
         this.scene.add(dice);
         this.dices.push(dice);
         this.world.add(dice.body);
-        dice.body.addEventListener("collide", function(e){sound.play('hit');});
+        dice.body.addEventListener("collide", function(e){
+            sound.play('hit');
+        });
     }
 
     this.dice_box.prototype.check_if_throw_finished = function() {
